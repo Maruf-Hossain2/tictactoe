@@ -545,22 +545,101 @@ body {
 @media (max-width: 768px) {
     .game-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 20px; /* Adjust as needed */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .title {
+        margin-bottom: 20px; /* Adjust as needed */
+    }
+
+    .cyber-text {
+        font-size: 24px; /* Reduce font size */
+    }
+
+    .ttt-text {
+        font-size: 36px; /* Reduce font size */
     }
 
     .board {
-        transform: none;
-        animation: none;
+        grid-template-columns: repeat(3, minmax(80px, 1fr)); /* Flexible grid */
+        grid-template-rows: repeat(3, minmax(80px, 1fr)); /* Flexible grid */
+        gap: 8px; /* Adjust as needed */
+        width: 100%; /* Occupy full width */
+        max-width: 300px; /* Limit maximum width */
+        margin: 0 auto; /* Center horizontally */
+        transform: none; /* Remove 3D transforms */
+        animation: none; /* Remove animations */
+        box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Simpler shadow */
     }
 
     .cell {
         width: 80px;
         height: 80px;
         font-size: 40px;
+        box-shadow: none; /* Remove cell shadow */
+        transition: none; /* Remove transition */
+    }
+    .cell::before {
+        display: none; /*Remove hover effect*/
     }
 
     .scoreboard {
         width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0; /* Center and add margin */
+        padding: 15px; /* Adjust padding */
+        animation: none; /* Remove animation */
+        box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Simpler shadow */
+
+    }
+
+    .message {
+        font-size: 20px;
         margin-top: 20px;
+        animation: none; /* Remove animation */
+        text-shadow: none; /* Remove text shadow */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust as needed */
+    }
+
+    .reset-btn, .name-btn {
+        width: 100%; /* Buttons occupy full width */
+        padding: 10px; /* Adjust padding */
+        font-size: 14px; /* Reduce font size */
+        box-shadow: none; /* Remove box shadow */
+    }
+
+    .modal-content {
+        width: 90%; /* Adjust width */
+        max-width: 320px; /* Adjust max-width */
+        padding: 20px; /* Adjust padding */
+        animation: none; /* Remove animation */
+        box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Simpler shadow */
+    }
+    .modal-header h2 {
+        font-size: 18px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .modal-buttons button {
+        font-size: 14px;
+    }
+
+    /* Remove all animations and complex transforms */
+    .board, .cell, .scoreboard, .message, .reset-btn, .name-btn, .modal-content {
+        transform: none !important;
+        animation: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    .winning-cell {
+        animation: none;
     }
 }
