@@ -3,7 +3,7 @@
 A modern take on the classic Tic-Tac-Toe game with a cyber theme.
 
 ## Play Online
-Visit: https://YOUR_USERNAME.github.io/tictactoe
+Visit: https://maruf-hossain2.github.io/tictactoe/
 
 ## Install for Offline Play
 1. Visit the game website
